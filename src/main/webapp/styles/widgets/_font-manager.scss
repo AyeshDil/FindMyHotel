@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
+
+$logo-font:'Anton', sans-serif;
+$main-font:'Roboto', sans-serif;
+
+$logo-font-size: 25px;
+$font-sizes:(regular:13px, medium:16px, large:20px);
+$font-weight:(regular:400, medium:500, bold:bold);
+
+@function getFontSize($size){
+  @return map-get($font-sizes, $size);
+}
+
+@function getFontWeight($weight){
+  @return map-get($font-weight, $weight);
+}
