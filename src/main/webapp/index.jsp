@@ -10,7 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="./styles/home.css">
 
     <title>FindMyHotel | Home</title>
@@ -38,11 +37,11 @@
                     </div>
                     <div class="col-3 reservation-search-data-field">
                         <%--date select area--%>
-<%--                        <input type="text"  name="datetimes">--%>
-<%--                        <input type="text" id="to" name="to">--%>
+                        <input type="text" id="from" name="from">
+                        <input type="text" id="to" name="to">
 <%--                        <input type="text" id="date-picker" name="to">--%>
-                            <input type="text" id="start-date" name="" value="" />
-                            <input type="text" id="end-date"  value="" />
+<%--                            <input type="text" id="date" name="" value="" />--%>
+<%--                            <input type="text" id="end-date"  value="" />--%>
 
                     </div>
                     <div class="col-3 reservation-search-data-field">
@@ -64,9 +63,6 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<%--<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>--%>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="js/home.js"></script>
 </body>
 </html>

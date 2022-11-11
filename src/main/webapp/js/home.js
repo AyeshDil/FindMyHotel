@@ -1,69 +1,72 @@
-// $( function() {
-//     var dateFormat = "dd/mm/yy",
-//         from = $( "#from" )
-//             .datepicker({
-//                 defaultDate: "+1w",
-//                 changeMonth: true,
-//                 numberOfMonths: 2,
-//                 selectMultiple: true,
-//                 selectMin: 1,
-//                 selectMax: 2,
-//             })
-//             .on( "change", function() {
-//                 to.datepicker( "option", "minDate", getDate( this ) );
-//             })
-//         to = $( "#to" ).datepicker({
-//             defaultDate: "+1w",
-//             changeMonth: true,
-//             numberOfMonths: 2,
-//             selectMultiple: true,
-//             selectMin: 1,
-//             selectMax: 2,
-//         })
-//             .on( "change", function() {
-//                 from.datepicker( "option", "maxDate", getDate( this ) );
-//             });
-//
-//     function getDate( element ) {
-//         var date;
-//         try {
-//             date = $.datepicker.parseDate( dateFormat, element.value );
-//         } catch( error ) {
-//             date = null;
-//         }
-//
-//         return date;
-//     }
-//
-//
-// } );
+$(function () {
+    const d = new Date();
+    var dateFormat = "yy/mm/dd",
+        from = $("#from")
+            .datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1,
+                dateFormat: 'yy-mm-dd'
+            })
+            .on("change", function () {
+                to.datepicker("option", "minDate", getDate(this));
+            });
+    $('#from').datepicker('setDate', d);
 
-$(function (){
-    $(function() {
-        $('input[id="start-date"]').daterangepicker({
-            opens: 'top',
-            drops:'up',
-            startDate: new Date().toLocaleDateString(),
-            endDate:  new Date().setDate(new Date().getDate()+2)
-        }, function(start, end, label) {
-            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-            document.getElementById("start-date").value =start.format('YYYY-MM-DD');
-            document.getElementById("end-date").value =end.format('YYYY-MM-DD');
-
+    to = $("#to").datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 1,
+        dateFormat: 'yy-mm-dd'
+    })
+        .on("change", function () {
+            from.datepicker("option", "maxDate", getDate(this));
         });
-    });
+    d.setDate(d.getDate() + 1)
+    $('#to').datepicker('setDate', d);
 
+    function getDate(element) {
+        var date;
+        try {
+            date = $.datepicker.parseDate(dateFormat, element.value);
+        } catch (error) {
+            date = null;
+        }
+        return date;
+    }
 
 });
 
-function loadDate(){
-    const date = new Date();
-    var defaultDate = date.toLocaleDateString();
-    document.getElementById("start-date").value =defaultDate;
-    document.getElementById("end-date").value =new Date().setDate(defaultDate.getDate() + 2);
+function loadDate() {
+    const options = {year: 'numeric', month: 'numeric', day: 'numeric'}
+    const d = new Date();
+    const updatedDate = new Date();
+    document.getElementById("from").value = d.toLocaleDateString('en-us', options);
+    updatedDate.setDate(updatedDate.getDate() + 2);
+    document.getElementById("to").value = updatedDate.toLocaleDateString('en-us', options);
 }
 
+/*
+$(function (){
+    $(function() {
+        $('input[id="date"]').daterangepicker({
+            opens: 'center',
+            drops:'up'
+        }, function(start, end, label) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' }
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            document.getElementById("date").value =start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY');
 
-// document.getElementById("ID").value = "Tamer Jarrar";
-// const days = 5;
-// date.setDate(date.getDate() + days);
+        });
+    });
+});
+
+function loadDate(){
+    const options = { year: 'numeric', month: 'short', day: 'numeric' }
+    const d = new Date();
+    const updatedDate = new Date();
+    updatedDate.setDate(updatedDate.getDate()+2);
+    document.getElementById("date").value =d.toLocaleDateString('en-GB', options)+ " - " + updatedDate.toLocaleDateString('en-GB', options);
+}
+*/
+
