@@ -1,0 +1,27 @@
+@use "widgets/image-properties" as *;
+@use "./widgets/font-manager" as *;
+@use "./widgets/flex-manager" as *;
+@use "./widgets/colors" as *;
+
+.content-outer{
+  width: 100%;
+  height: 550px;
+  background: url("https://cdn.pixabay.com/photo/2018/04/05/13/08/water-3292794_960_720.jpg");
+  @include imageProperty;
+  @include flexView(column);
+  justify-content: flex-end;
+}
+
+.main-text,.sub-text{
+  width: 100%;
+  height: 50px;
+  border: 1px solid red;
+}
+.main-text{
+  h2{
+    color: $primary-color;
+  }
+}
+.reservation-search-data-field{
+  border: 1px solid red;
+}
