@@ -8,16 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
 <body>
 
-<div class="outer">
+<div class="outside">
     <div class="left">
         <h2>FindMyHotel.com</h2>
     </div>
     <div class="right">
-        <button>Manage Business</button>
+        <button class=" manage-btn">Manage Business</button>
     </div>
 </div>
 

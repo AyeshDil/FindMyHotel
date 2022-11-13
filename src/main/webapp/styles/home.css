@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap");
+.content-outer {
+  width: 100%;
+  height: 100vh;
+  background: url("https://img.freepik.com/free-photo/portrait-beautiful-young-asian-woman-smile-happy-relax-around-swimming-pool-hotel-resort_74190-9164.jpg?w=996&t=st=1668269713~exp=1668270313~hmac=18a7cb9cf96d8fbc1760dab7dfdf216d2987e9fbf67ced33944484c6e4a313d2");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.content-outer .main-text, .content-outer .sub-text {
+  width: 100%;
+  height: 50px;
+}
+.content-outer .main-text {
+  margin-bottom: 20px;
+}
+.content-outer .main-text h1 {
+  color: #07365F;
+  font-size: 55px;
+}
+.content-outer .sub-text h3 {
+  font-size: 35px;
+}
+
+.reservation-making-outer {
+  background-color: rgba(52, 73, 94, 0.7);
+  padding: 20px 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.reservation-search-data-field {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reservation-search-data-field .input-area {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+.reservation-search-data-field .from-date {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.reservation-search-data-field .to-date {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.reservation-search-data-field input {
+  width: 100%;
+  height: 40px;
+  background: none;
+  border-radius: 15px;
+  border: none;
+  padding: 0 10px;
+}
+.reservation-search-data-field input:focus {
+  outline: none;
+}
+
+.special-outer .special-input-outer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 10px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+.special-outer .special-input-outer select {
+  background: none;
+  border-radius: 15px;
+  border: none;
+}
+.special-outer .special-input-outer select:focus {
+  outline: none;
+}
+.special-outer .adult-select-area {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.special-outer .child-select-area {
+  border-radius: 0px;
+}
+.special-outer .room-select-area {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.date-selector {
+  width: 150px;
+}
+
+.search-btn {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hotels-outer {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+.hotels-outer .image-outer {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=home.css.map */

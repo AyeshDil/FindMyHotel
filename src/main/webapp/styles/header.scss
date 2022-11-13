@@ -2,41 +2,43 @@
 @use "./widgets/flex-manager" as *;
 @use "./widgets/colors" as *;
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-.outer{
+.outside {
   width: 100%;
   height: 60px;
   background-color: $primary-color;
   color: $primary-font-color;
   @include flexView(row);
+}
 
-  .left,.right{
-    flex: 1;
-    height: 100%;
-    @include flexView(row);
-    padding: 0 20px;
+.left, .right {
+  flex: 1;
+  height: 100%;
+  @include flexView(row);
+  padding: 0 20px;
+}
+
+.left {
+  h2 {
+    font-family: $main-font;
+    font-size: $logo-font-size;
+
   }
+}
 
-  .left{
-    h2{
-      font-family: $main-font;
-      font-size: $logo-font-size;
+.right {
+  justify-content: flex-end;
 
-    }
-  }
-  .right{
-    justify-content: flex-end;
 
-    button{
-      padding: 10px;
-      border-radius: 15px;
-      background-color: $manage-business-btn-color;
-      border: 1px solid white;
-      color: $primary-font-color;
-    }
-  }
+}
+.manage-btn {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: $manage-business-btn-color;
+  border: 1px solid white;
+  color: $primary-font-color;
 }
