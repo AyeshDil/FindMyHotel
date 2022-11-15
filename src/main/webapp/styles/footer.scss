@@ -12,7 +12,9 @@
   height: 60px;
   background-color: $primary-color;
   color: $primary-font-color;
+  @include flexView(column);
   //position: absolute;
   //z-index: 2;
   //bottom: 0;
 }
+

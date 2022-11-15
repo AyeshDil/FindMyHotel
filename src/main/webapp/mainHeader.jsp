@@ -17,10 +17,10 @@
         <h2>FindMyHotel.com</h2>
     </div>
     <div class="right">
-        <button class=" manage-btn">Manage Business</button>
+        <button class=" manage-btn" onclick="navigateToDashboard()">Manage Business</button>
     </div>
 </div>
 
-
+<script src="js/header.js"></script>
 </body>
 </html>

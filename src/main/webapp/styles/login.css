@@ -1,0 +1,42 @@
+.outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-inner {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #07365F;
+  background-color: #ecf0f1;
+  border-radius: 20px;
+  display: flex;
+}
+
+.box {
+  flex: 1;
+  height: 100%;
+}
+
+.right {
+  background: url("https://cdn.pixabay.com/photo/2014/05/17/18/03/lobby-346426_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.details-outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=login.css.map */

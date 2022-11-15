@@ -14,9 +14,9 @@
 <body>
 <div class="outer">
     <div class="inner">
-        <h5>
+        <p>
             <%= "Copyright &copy; 2000-"+ new SimpleDateFormat("yyyy").format(new Date())+" findMytHotel.com &trade;. All rights reserved."%>
-        </h5>
+        </p>
     </div>
 </div>
 </body>
